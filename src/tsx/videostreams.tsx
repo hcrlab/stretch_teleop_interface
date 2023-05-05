@@ -4,7 +4,6 @@ import Grid from '@mui/material/Grid'
 import { ROSCompressedImage } from "../util/util";
 import * as Bp from "./buttonpads"
 import { PredictiveDisplay } from "./predictivedisplay";
-import { isUndefined } from "util";
 import "../css/videostreams.css"
 
 type VideoStreamProps = {
@@ -79,9 +78,9 @@ export const VideoStreamComponent = (props: {streams: VideoStream[]}) => {
         <div id="video-stream-container">
             {props.streams.map((stream, i) => (
                 <div key={i} className="video-stream" style={{width: widths[i]}}>
-                    <div className="video-button-pad">
+                    {/* <div className="video-button-pad">
                         {buttonPads[i]}
-                    </div>
+                    </div> */}
                     {stream.render()}
                 </div>
             )
